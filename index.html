@@ -24,6 +24,9 @@ align-items:center;
 background:rgba(0,0,0,0.5);
 padding:30px;
 border-radius:15px;
+position:relative;
+z-index:2;
+max-width:500px;
 }
 
 button{
@@ -33,6 +36,12 @@ border:none;
 border-radius:10px;
 margin:10px;
 cursor:pointer;
+background:#ff914d;
+color:white;
+}
+
+button:hover{
+background:#ff7a26;
 }
 
 </style>
@@ -43,7 +52,7 @@ cursor:pointer;
 
 <div class="caja">
 
-<h1>Hola, soy Nicole (o niki) 🌊</h1>
+<h1>Hola, soy Nicole (o Niki) 🌊</h1>
 
 <p>Estudio ingeniería de software y estoy aprendiendo a crear cositas.</p>
 
@@ -65,18 +74,18 @@ let datos = [
 "A veces pienso demasiado las cosas",
 "Este sitio lo hice yo misma 😌",
 "El mar al atardecer es mi vibra favorita",
-"M encanta la política",
-"Soy Cristiana. ❤️",
+"Me encanta la política",
+"Soy Cristiana ❤️",
 "Tengo muy buen gusto musical, ok",
-"PidanmeMiPlaylist",
-"Tengo un cuy de mascota y se llama Capix",
-"ADORO los debates con mi papá",
-"Amo a mi papá y a mi family",
+"Pídanme mi playlist",
+"Tengo un cuy de mascota y se llama Capix 🐹",
+"Adoro los debates con mi papá",
+"Amo a mi papá y a mi familia",
 "Soy extrovertida cuando estoy en mis 5 minutos JAKSJKJA",
-"t ailoviu persona q lea esto"
+"Te ailoviu persona que lea esto"
 ];
 
-let random = Math.floor(Math.random()*datos.length);
+let random = Math.floor(Math.random() * datos.length);
 
 document.getElementById("dato").innerText = datos[random];
 
@@ -85,5 +94,4 @@ document.getElementById("dato").innerText = datos[random];
 </script>
 
 </body>
-
 </html>
