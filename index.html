@@ -15,17 +15,14 @@ background-image:url("https://images.unsplash.com/photo-1507525428034-b723cf961d
 background-size:cover;
 background-position:center;
 display:flex;
-flex-direction:column;
 justify-content:center;
 align-items:center;
 }
 
 .caja{
-background:rgba(0,0,0,0.5);
+background:rgba(0,0,0,0.6);
 padding:30px;
 border-radius:15px;
-position:relative;
-z-index:2;
 max-width:500px;
 }
 
@@ -44,6 +41,11 @@ button:hover{
 background:#ff7a26;
 }
 
+#dato{
+margin-top:15px;
+font-size:18px;
+}
+
 </style>
 
 </head>
@@ -58,15 +60,13 @@ background:#ff7a26;
 
 <p>Este es mi pequeño inicio en la web.</p>
 
-<button onclick="mostrar()">Un dato sobre mí</button>
+<button id="boton">Un dato sobre mí</button>
 
 <p id="dato"></p>
 
 </div>
 
 <script>
-
-function mostrar(){
 
 let datos = [
 "Me gusta la tecnología",
@@ -85,11 +85,13 @@ let datos = [
 "Te ailoviu persona que lea esto"
 ];
 
-let random = Math.floor(Math.random() * datos.length);
+document.getElementById("boton").onclick = function(){
+
+let random = Math.floor(Math.random()*datos.length);
 
 document.getElementById("dato").innerText = datos[random];
 
-}
+};
 
 </script>
 
