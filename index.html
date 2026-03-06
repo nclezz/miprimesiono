@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>El rincón de Niki</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+font-family:Arial;
+color:white;
+text-align:center;
+background-image:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+.caja{
+background:rgba(0,0,0,0.5);
+padding:30px;
+border-radius:15px;
+}
+
+button{
+padding:12px 20px;
+font-size:16px;
+border:none;
+border-radius:10px;
+margin:10px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="caja">
+
+<h1>Hola, soy Nicole (o niki) 🌊</h1>
+
+<p>Estudio ingeniería de software y estoy aprendiendo a crear cositas.</p>
+
+<p>Este es mi pequeño inicio en la web.</p>
+
+<button onclick="mostrar()">Un dato sobre mí</button>
+
+<p id="dato"></p>
+
+</div>
+
+<script>
+
+function mostrar(){
+
+let datos = [
+"Me gusta la tecnología",
+"Estoy aprendiendo programación",
+"A veces pienso demasiado las cosas",
+"Este sitio lo hice yo misma 😌",
+"El mar al atardecer es mi vibra favorita"
+"M encanta la política"
+"Soy Cristiana. ❤️"
+"Tengo muy buen gusto musical, ok"
+"PidanmeMiPlaylist"
+"Tengo un cuy de mascota y se llama Capix"
+"ADORO los debates con mi papá"
+"Amo a mi papá y a mi family"
+"Soy extrovertida cuando estoy en mis 5 minutos JAKSJKJA"
+"t ailoviu persona q lea esto"
+];
+
+let random = Math.floor(Math.random()*datos.length);
+
+document.getElementById("dato").innerText = datos[random];
+
+}
+
+</script>
+
+</body>
+
+</html>
